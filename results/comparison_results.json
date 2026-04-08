@@ -1,0 +1,40 @@
+[
+  {
+    "config": {
+      "name": "baseline_15pct",
+      "masking_type": "baseline",
+      "mlm_probability": 0.15,
+      "mean_span_length": 3.0,
+      "max_span_length": 10,
+      "num_epochs": 1,
+      "batch_size": 4
+    },
+    "metrics": {
+      "eval_loss": 1.6743271350860596,
+      "eval_runtime": 116.1594,
+      "eval_samples_per_second": 10.529,
+      "eval_steps_per_second": 2.634,
+      "epoch": 1.0,
+      "eval_perplexity": 5.335204069425886
+    }
+  },
+  {
+    "config": {
+      "name": "span_15pct_mean3",
+      "masking_type": "span",
+      "mlm_probability": 0.15,
+      "mean_span_length": 3.0,
+      "max_span_length": 10,
+      "num_epochs": 1,
+      "batch_size": 4
+    },
+    "metrics": {
+      "eval_loss": 3.09358811378479,
+      "eval_runtime": 113.5909,
+      "eval_samples_per_second": 10.767,
+      "eval_steps_per_second": 2.694,
+      "epoch": 1.0,
+      "eval_perplexity": 22.056075874166527
+    }
+  }
+]
