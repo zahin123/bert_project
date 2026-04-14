@@ -1,26 +1,26 @@
 [
   {
     "config": {
-      "name": "baseline_15pct",
-      "masking_type": "baseline",
+      "name": "span_mean1",
+      "masking_type": "span",
       "mlm_probability": 0.15,
-      "mean_span_length": 3.0,
+      "mean_span_length": 1.0,
       "max_span_length": 10,
       "num_epochs": 1,
       "batch_size": 4
     },
     "metrics": {
-      "eval_loss": 1.6743271350860596,
-      "eval_runtime": 116.1594,
-      "eval_samples_per_second": 10.529,
-      "eval_steps_per_second": 2.634,
+      "eval_loss": 1.6822251081466675,
+      "eval_runtime": 9.047,
+      "eval_samples_per_second": 10.832,
+      "eval_steps_per_second": 2.763,
       "epoch": 1.0,
-      "eval_perplexity": 5.335204069425886
+      "eval_perplexity": 5.37750820600092
     }
   },
   {
     "config": {
-      "name": "span_15pct_mean3",
+      "name": "span_mean3",
       "masking_type": "span",
       "mlm_probability": 0.15,
       "mean_span_length": 3.0,
@@ -29,12 +29,50 @@
       "batch_size": 4
     },
     "metrics": {
-      "eval_loss": 3.09358811378479,
-      "eval_runtime": 113.5909,
-      "eval_samples_per_second": 10.767,
-      "eval_steps_per_second": 2.694,
+      "eval_loss": 3.3880443572998047,
+      "eval_runtime": 9.0272,
+      "eval_samples_per_second": 10.856,
+      "eval_steps_per_second": 2.769,
       "epoch": 1.0,
-      "eval_perplexity": 22.056075874166527
+      "eval_perplexity": 29.60799295969068
+    }
+  },
+  {
+    "config": {
+      "name": "span_mean5",
+      "masking_type": "span",
+      "mlm_probability": 0.15,
+      "mean_span_length": 5.0,
+      "max_span_length": 10,
+      "num_epochs": 1,
+      "batch_size": 4
+    },
+    "metrics": {
+      "eval_loss": 3.866297483444214,
+      "eval_runtime": 9.1897,
+      "eval_samples_per_second": 10.664,
+      "eval_steps_per_second": 2.72,
+      "epoch": 1.0,
+      "eval_perplexity": 47.76520680963061
+    }
+  },
+  {
+    "config": {
+      "name": "span_mean10",
+      "masking_type": "span",
+      "mlm_probability": 0.15,
+      "mean_span_length": 10.0,
+      "max_span_length": 10,
+      "num_epochs": 1,
+      "batch_size": 4
+    },
+    "metrics": {
+      "eval_loss": 4.271430969238281,
+      "eval_runtime": 8.9396,
+      "eval_samples_per_second": 10.962,
+      "eval_steps_per_second": 2.797,
+      "epoch": 1.0,
+      "eval_perplexity": 71.62405414106235
     }
   }
 ]

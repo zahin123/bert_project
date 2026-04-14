@@ -43,7 +43,7 @@ from span_masking_collator import SpanMaskingDataCollator
 
 MODEL_NAME = "bert-base-uncased"
 MAX_LENGTH = 128
-DATASET_FRACTION = "train[:1%]"   # bump to e.g. 5% for real experiments
+DATASET_FRACTION = "train[:5000]"
 OUTPUT_ROOT = "./results"
 
 

@@ -187,15 +187,15 @@ class SpanMaskingDataCollator:
         """
         Draw a span length from a geometric distribution, capped at
         max_span_length.
-
-        Geometric(p) has mean = 1/p; we subtract 1 to get minimum
-        span length of 1.
         """
+        # Clamp p away from 1.0 to avoid log(0) when mean_span_length = 1
+        p = min(self._geo_p, 0.9999)
         length = 0
         while length < 1:
-            length = int(math.ceil(
-                math.log(random.random() + 1e-12) / math.log(1 - self._geo_p)
-            ))
+            r = random.random()
+            if r < 1e-12:
+                r = 1e-12
+            length = int(math.ceil(math.log(r) / math.log(1 - p)))
         return min(length, self.max_span_length)
 
     def _pad_batch(
