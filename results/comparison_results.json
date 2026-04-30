@@ -1,192 +1,62 @@
 [
   {
     "config": {
-      "name": "span_mean1",
-      "masking_type": "span",
-      "mlm_probability": 0.15,
-      "mean_span_length": 1.0,
-      "max_span_length": 10,
-      "num_epochs": 1,
-      "batch_size": 4
-    },
-    "metrics": {
-      "eval_loss": 1.6822251081466675,
-      "eval_runtime": 9.047,
-      "eval_samples_per_second": 10.832,
-      "eval_steps_per_second": 2.763,
-      "epoch": 1.0,
-      "eval_perplexity": 5.37750820600092
-    }
-  },
-  {
-    "config": {
-      "name": "span_mean3",
-      "masking_type": "span",
-      "mlm_probability": 0.15,
-      "mean_span_length": 3.0,
-      "max_span_length": 10,
-      "num_epochs": 1,
-      "batch_size": 4
-    },
-    "metrics": {
-      "eval_loss": 3.3880443572998047,
-      "eval_runtime": 9.0272,
-      "eval_samples_per_second": 10.856,
-      "eval_steps_per_second": 2.769,
-      "epoch": 1.0,
-      "eval_perplexity": 29.60799295969068
-    }
-  },
-  {
-    "config": {
-      "name": "span_mean5",
-      "masking_type": "span",
-      "mlm_probability": 0.15,
-      "mean_span_length": 5.0,
-      "max_span_length": 10,
-      "num_epochs": 1,
-      "batch_size": 4
-    },
-    "metrics": {
-      "eval_loss": 3.866297483444214,
-      "eval_runtime": 9.1897,
-      "eval_samples_per_second": 10.664,
-      "eval_steps_per_second": 2.72,
-      "epoch": 1.0,
-      "eval_perplexity": 47.76520680963061
-    }
-  },
-  {
-    "config": {
-      "name": "span_mean10",
-      "masking_type": "span",
-      "mlm_probability": 0.15,
-      "mean_span_length": 10.0,
-      "max_span_length": 10,
-      "num_epochs": 1,
-      "batch_size": 4
-    },
-    "metrics": {
-      "eval_loss": 4.271430969238281,
-      "eval_runtime": 8.9396,
-      "eval_samples_per_second": 10.962,
-      "eval_steps_per_second": 2.797,
-      "epoch": 1.0,
-      "eval_perplexity": 71.62405414106235
-    }
-  },
-  {
-    "config": {
-      "name": "baseline_10pct",
-      "masking_type": "baseline",
-      "mlm_probability": 0.1,
-      "mean_span_length": 3.0,
-      "max_span_length": 10,
-      "num_epochs": 1,
-      "batch_size": 4
-    },
-    "metrics": {
-      "eval_loss": 1.9680719375610352,
-      "eval_runtime": 3.7413,
-      "eval_samples_per_second": 10.692,
-      "eval_steps_per_second": 2.673,
-      "epoch": 1.0,
-      "eval_perplexity": 7.1568642960109
-    }
-  },
-  {
-    "config": {
       "name": "baseline_15pct",
       "masking_type": "baseline",
       "mlm_probability": 0.15,
       "mean_span_length": 3.0,
       "max_span_length": 10,
+      "linguistic_ratio": 1.0,
       "num_epochs": 1,
       "batch_size": 4
     },
     "metrics": {
-      "eval_loss": 2.0091187953948975,
-      "eval_runtime": 3.597,
-      "eval_samples_per_second": 11.12,
-      "eval_steps_per_second": 2.78,
+      "eval_loss": 2.009557008743286,
+      "eval_runtime": 3.7952,
+      "eval_samples_per_second": 10.54,
+      "eval_steps_per_second": 2.635,
       "epoch": 1.0,
-      "eval_perplexity": 7.456743534565823
+      "eval_perplexity": 7.460011895185504
     }
   },
   {
     "config": {
-      "name": "baseline_20pct",
-      "masking_type": "baseline",
-      "mlm_probability": 0.2,
-      "mean_span_length": 3.0,
-      "max_span_length": 10,
-      "num_epochs": 1,
-      "batch_size": 4
-    },
-    "metrics": {
-      "eval_loss": 2.113283634185791,
-      "eval_runtime": 3.5789,
-      "eval_samples_per_second": 11.177,
-      "eval_steps_per_second": 2.794,
-      "epoch": 1.0,
-      "eval_perplexity": 8.27537000770705
-    }
-  },
-  {
-    "config": {
-      "name": "span_10pct",
-      "masking_type": "span",
-      "mlm_probability": 0.1,
-      "mean_span_length": 3.0,
-      "max_span_length": 10,
-      "num_epochs": 1,
-      "batch_size": 4
-    },
-    "metrics": {
-      "eval_loss": 3.8784422874450684,
-      "eval_runtime": 3.4109,
-      "eval_samples_per_second": 11.727,
-      "eval_steps_per_second": 2.932,
-      "epoch": 1.0,
-      "eval_perplexity": 48.34884278298647
-    }
-  },
-  {
-    "config": {
-      "name": "span_15pct",
+      "name": "span_mean3_15pct",
       "masking_type": "span",
       "mlm_probability": 0.15,
       "mean_span_length": 3.0,
       "max_span_length": 10,
+      "linguistic_ratio": 1.0,
       "num_epochs": 1,
       "batch_size": 4
     },
     "metrics": {
-      "eval_loss": 3.9016387462615967,
-      "eval_runtime": 3.7809,
-      "eval_samples_per_second": 10.58,
-      "eval_steps_per_second": 2.645,
+      "eval_loss": 3.9007537364959717,
+      "eval_runtime": 3.6576,
+      "eval_samples_per_second": 10.936,
+      "eval_steps_per_second": 2.734,
       "epoch": 1.0,
-      "eval_perplexity": 49.48347355544025
+      "eval_perplexity": 49.43969957116556
     }
   },
   {
     "config": {
-      "name": "span_20pct",
-      "masking_type": "span",
-      "mlm_probability": 0.2,
+      "name": "linguistic_NE_NP_VP",
+      "masking_type": "linguistic",
+      "mlm_probability": 0.15,
       "mean_span_length": 3.0,
       "max_span_length": 10,
+      "linguistic_ratio": 1.0,
       "num_epochs": 1,
       "batch_size": 4
     },
     "metrics": {
-      "eval_loss": 3.641695022583008,
-      "eval_runtime": 3.7731,
-      "eval_samples_per_second": 10.601,
-      "eval_steps_per_second": 2.65,
+      "eval_loss": 3.5299904346466064,
+      "eval_runtime": 3.762,
+      "eval_samples_per_second": 10.633,
+      "eval_steps_per_second": 2.658,
       "epoch": 1.0,
-      "eval_perplexity": 38.15645800066532
+      "eval_perplexity": 34.12364120850604
     }
   }
 ]

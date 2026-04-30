@@ -313,18 +313,28 @@ class LinguisticSpanMaskingDataCollator:
         Collate a batch. Each feature dict must contain:
           - input_ids            : List[int]
           - attention_mask       : List[int]
-          - special_tokens_mask  : List[int]
+          - special_tokens_mask  : List[int]  (derived automatically if absent)
           - offset_mapping       : List[Tuple[int,int]]
           - original_text        : str   (the raw text before tokenization)
         """
         # Reset per-batch stats
         self._stats = {"linguistic": 0, "geometric": 0, "total_seqs": len(features)}
 
-        # Pad and stack — but strip non-tensor fields first
+        # Strip non-tensor fields before padding
+        NON_TENSOR = {"original_text", "offset_mapping"}
         tensor_features = [
-            {k: v for k, v in f.items() if k not in ("original_text", "offset_mapping")}
+            {k: v for k, v in f.items() if k not in NON_TENSOR}
             for f in features
         ]
+
+        # Ensure special_tokens_mask is present — derive it if missing
+        for i, f in enumerate(tensor_features):
+            if "special_tokens_mask" not in f:
+                sp_mask = self.tokenizer.get_special_tokens_mask(
+                    f["input_ids"], already_has_special_tokens=True
+                )
+                tensor_features[i]["special_tokens_mask"] = sp_mask
+
         batch = self._pad_batch(tensor_features)
         labels = batch["input_ids"].clone()
 
